@@ -1,8 +1,13 @@
 class Statement
 
   def print_statement(transactions)
+    puts 'date || credit || debit || balance'
     transactions.each do |transaction|
-      puts "#{transaction.type} #{transaction.amount} #{transaction.balance} #{transaction.date}"
+      if transaction.type == :deposit
+        puts "#{transaction.date.strftime('%d/%m/%Y')} || #{transaction.amount} || || #{transaction.balance}"
+      else
+        puts "#{transaction.date.strftime('%d/%m/%Y')} || || #{transaction.amount} || #{transaction.balance}"
+      end
     end
   end
 end
