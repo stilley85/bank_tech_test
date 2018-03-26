@@ -4,10 +4,8 @@ Bank Tech Test
 How to run
 ----------
 
-1. `git clone`
-2. `gem install bundle`
-3. `bundle`
-4. `irb`
+1. `git clone https://github.com/stilley85/bank_tech_test.git`
+2. `irb`
 
 How to use
 ----------
