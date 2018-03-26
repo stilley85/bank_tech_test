@@ -3,8 +3,8 @@ class Account
 
   attr_reader :balance, :transactions
 
-  def initialize(transaction = Transaction)
-    @balance = DEFAULT_BALANCE
+  def initialize(transaction = Transaction, balance = DEFAULT_BALANCE)
+    @balance = balance
     @transactions = []
     @transaction = transaction
   end
