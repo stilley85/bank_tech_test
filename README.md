@@ -13,11 +13,11 @@ How to run
 How to use
 ----------
 
-`account = Account.new` - Creates a new account object.
-`account.deposit(50)` - Deposits the passed amount.
-`account.withdraw(20)` - Withdraws the passed amount.
-`account.balance` - Shows the current balance.
-`account.print_statement` - Prints a statement of all transactions.
+* `account = Account.new` - Creates a new account object.
+* `account.deposit(50)` - Deposits the passed amount.
+* `account.withdraw(20)` - Withdraws the passed amount.
+* `account.balance` - Shows the current balance.
+* `account.print_statement` - Prints a statement of all transactions.
 
 Criteria
 --------
