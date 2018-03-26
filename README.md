@@ -8,7 +8,8 @@ How to run
 2. `cd bank`
 3. `gem install bundle`
 4. `bundle`
-5. `irb`
+5. `irb` - To use the program.
+6. `rspec` - To run tests.
 
 How to use
 ----------
