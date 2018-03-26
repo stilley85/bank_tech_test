@@ -4,13 +4,15 @@ class Account
 
   attr_reader :balance, :transactions
 
-  def initialize
+  def initialize(transaction = Transaction)
     @balance = DEFAULT_BALANCE
     @transactions = []
+    @transaction = transaction
   end
 
   def deposit(total)
     @balance += total
+    deposit_transaction = @transaction.new("deposit", total)
   end
 
   def withdraw(total)
