@@ -13,6 +13,7 @@ class Account
   def deposit(total)
     @balance += total
     deposit_transaction = @transaction.new("deposit", total)
+    @transactions << deposit_transaction
   end
 
   def withdraw(total)

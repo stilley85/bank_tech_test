@@ -26,6 +26,11 @@ describe Account do
       account.deposit(50)
     end
 
+    it 'adds a new transaction to the transactions array' do
+      account.deposit(50)
+      expect(account.transactions).to include(:deposit_transaction)
+    end
+    
   end
 
   context '#withdraw' do
