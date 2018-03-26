@@ -12,4 +12,8 @@ class Account
     @balance += total
   end
 
+  def withdraw(total)
+    @balance -= total
+  end
+
 end

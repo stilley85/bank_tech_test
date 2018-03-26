@@ -16,4 +16,11 @@ describe Account do
       expect(account.balance).to eq(50)
     end
   end
+
+  context '#withdraw' do
+    it 'removes 50 from the balance when 50 is withdrawn' do
+      account.withdraw(50)
+      expect(account.balance).to eq(-50)
+    end
+  end
 end
