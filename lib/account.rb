@@ -1,5 +1,4 @@
 class Account
-
   DEFAULT_BALANCE = 0
 
   attr_reader :balance, :transactions
@@ -12,14 +11,16 @@ class Account
 
   def deposit(total)
     @balance += total
-    deposit_transaction = @transaction.new(:deposit, total, balance)
-    @transactions << deposit_transaction
+    @transactions << @transaction.new(:deposit, total, balance)
   end
 
   def withdraw(total)
     @balance -= total
-    withdraw_transaction = @transaction.new(:withdraw, total, balance)
-    @transactions << withdraw_transaction
+    @transactions << @transaction.new(:withdraw, total, balance)
   end
 
+  def print_statement
+    @statement = Statement.new
+    @statement.print_statement(transactions)
+  end
 end

@@ -2,14 +2,13 @@ require 'transaction'
 require 'timecop'
 
 describe Transaction do
-
-  subject(:transaction) { described_class.new("deposit", 10, 100) }
+  subject(:transaction) { described_class.new(:deposit, 10, 100) }
 
   before { Timecop.freeze(Time.now) }
 
   context '#initialize' do
     it 'initializes with a type' do
-      expect(transaction.type).to eq("deposit")
+      expect(transaction.type).to eq(:deposit)
     end
 
     it 'initializes with an amount' do
@@ -24,5 +23,4 @@ describe Transaction do
       expect(transaction.date).to eq(Time.now)
     end
   end
-
 end

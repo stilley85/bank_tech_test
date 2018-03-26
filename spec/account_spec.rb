@@ -1,8 +1,7 @@
 require 'account'
 
 describe Account do
-
-  let(:transaction) { double("A Transaction", new: :transaction_object) }
+  let(:transaction) { double('A Transaction', new: :transaction_object) }
   subject(:account) { described_class.new(transaction) }
 
   context '#initialize' do
@@ -30,7 +29,6 @@ describe Account do
       account.deposit(50)
       expect(account.transactions).to include(:transaction_object)
     end
-
   end
 
   context '#withdraw' do
@@ -47,6 +45,13 @@ describe Account do
     it 'adds a new transaction to the transactions array' do
       account.withdraw(50)
       expect(account.transactions).to include(:transaction_object)
+    end
+  end
+
+  context '#print_statement' do
+    it "prints a statement" do
+      allow(account).to receive(:print_statement).and_return('A statement')
+      expect(account.print_statement).to eq('A statement')
     end
   end
 end
