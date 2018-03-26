@@ -13,8 +13,8 @@ describe Statement do
     it 'prints a list of transactions' do
       expect{statement.print_statement(transactions)}.to output(<<~MESSAGE).to_stdout
       date || credit || debit || balance
-      #{Time.now.strftime('%d/%m/%Y')} || 50 || || 50
       #{Time.now.strftime('%d/%m/%Y')} || || 10 || 40
+      #{Time.now.strftime('%d/%m/%Y')} || 50 || || 50
       MESSAGE
     end
   end
