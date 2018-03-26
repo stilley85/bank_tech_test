@@ -22,7 +22,7 @@ describe Account do
     end
 
     it 'creates a new transaction object' do
-      expect(transaction).to receive(:new).with(:deposit, 50)
+      expect(transaction).to receive(:new).with(:deposit, 50, 50)
       account.deposit(50)
     end
 
@@ -40,7 +40,7 @@ describe Account do
     end
 
     it 'creates a new transaction object' do
-      expect(transaction).to receive(:new).with(:withdraw, 50)
+      expect(transaction).to receive(:new).with(:withdraw, 50, -50)
       account.withdraw(50)
     end
 
