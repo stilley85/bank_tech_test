@@ -12,13 +12,13 @@ class Account
 
   def deposit(total)
     @balance += total
-    deposit_transaction = @transaction.new("deposit", total)
+    deposit_transaction = @transaction.new(:deposit, total)
     @transactions << deposit_transaction
   end
 
   def withdraw(total)
     @balance -= total
-    withdraw_transaction = @transaction.new("withdraw", total)
+    withdraw_transaction = @transaction.new(:withdraw, total)
     @transactions << withdraw_transaction
   end
 
