@@ -18,6 +18,8 @@ class Account
 
   def withdraw(total)
     @balance -= total
+    withdraw_transaction = @transaction.new("withdraw", total)
+    @transactions << withdraw_transaction
   end
 
 end
